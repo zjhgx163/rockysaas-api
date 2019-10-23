@@ -28,6 +28,7 @@
 | platform  | 平台名  | string | Y    | 固定值rockysaas            |
 | userName  | 用户名  | string | Y    |                         |
 | secretKey | 密钥   | string | N    | 建议服务商为每个用户生成一个密钥，以增加安全性 |
+| appId     | 应用id | string | Y    | 唯一的应用id                 |
 
 #### 2.3  响应参数
 
@@ -46,7 +47,8 @@
 	"bizParams":"{				
 					"platform":"rockysaas",
 					"secretKey":"secret6",
-					"userName":"test7"
+					"userName":"test7",
+   					"appId":"ZKIDJH"
 				}"
 }
 ```
