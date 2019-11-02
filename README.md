@@ -53,7 +53,7 @@
 | appId     | string | Y    | 唯一应用标识                           |
 | bizParams | string | Y    | 请求的业务数据，此处数据格式为Json封装。具体参数查看详细接口 |
 | sign      | string | Y    | API请求的签名（不参与签名）                  |
-| timestamp | long   | Y    | 10位时间戳，精确到秒                      |
+| timestamp | long   | Y    | 13位时间戳，精确到毫秒                     |
 
 ##### 2.3.2 响应参数
 
