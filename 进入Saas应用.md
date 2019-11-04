@@ -38,14 +38,6 @@
 ##### GET 请求（注意bizParams为字符串）：
 
 ```Java
- {
-	"sign":"xxxxxz/Pdp42F+vjg43XuaJpBecb1/FJdcyHdcEitKKo=",
-	"timestamp":"1571660273108",
-	"bizParams":"{				
-					"platform":"rockysaas",
-					"secretKey":"secret6",
-					"userName":"test7"
-				}"
-}
+ http://wddev.panshi101.com/warranty.jsp?appId=x&bizParams=x&sign=x&timestamp=xxxx
 ```
 

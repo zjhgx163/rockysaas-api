@@ -142,7 +142,7 @@
     get请求发送，参数拼接在url后面
 
     ```Java
-    http://wddev.panshi101.com/rockysaas/receiveOrderBySaas?appId=x&bizParams=x&sign=x&timestamp=xxxx
+    http://wddev.panshi101.com/warranty.jsp?appId=x&bizParams=x&sign=x&timestamp=xxxx
     ```
 
     ​
