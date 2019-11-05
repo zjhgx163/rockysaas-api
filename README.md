@@ -66,7 +66,7 @@
 
 ### 3. 签名加密规则
 
-为保证数据传输过程不被篡改，所有接口需要签名和验签，签名算法为RSA，接收参数时需要验签，验签失败拒绝请求，不处理任何逻辑。
+为保证数据传输过程不被篡改，所有接口需要签名和验签，签名算法为RSA/MD5withRSA，接收参数时需要验签，验签失败拒绝请求，不处理任何逻辑。
 
 #### 3.1 服务商调用平台请求发送过程
 
@@ -104,7 +104,9 @@
    }
    ```
 
-6. 接受返回参数并处理逻辑
+6. 平台使用服务商提供的公钥进行验签
+
+7. 服务商接受返回参数并处理逻辑
 
 
 #### 3.2 平台调用服务商请求发送过程
@@ -145,9 +147,14 @@
     http://wddev.panshi101.com/warranty.jsp?appId=x&bizParams=x&sign=x&timestamp=xxxx
     ```
 
-    ​
-
 6.  服务商使用平台提供的公钥进行验签
+
+#### 3.3 RSA密钥生成方法
+
+通过openssl工具生成RSA的公钥和私钥。
+
+- 生成私钥：openssl genrsa -out rsa_private_key.pem 1024
+- 生成公钥：openssl rsa -in rsa_private_key.pem -pubout -out rsa_public_key.pem
 
 ### 4. 代码示例
 
