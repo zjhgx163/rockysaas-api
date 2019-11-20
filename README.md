@@ -4,7 +4,7 @@
 
 1. 申请appId
 
-2. 获取平台公钥，提交机构公钥。平台公钥为
+2. 获取**平台公钥**，提交**机构公钥**。平台公钥为
 
    ```bash
    MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCr3rUEE4PpowG0bdPHBb4D27n7XNK3B+TSsneXDwf5rECnAmwRVnWQSSi8U7fccKpeVJt0+CYs/Q6Dcxa1VutJyR1yMeSNwyd66scpF4rNsXv4FEGvuZOgpD3MBESvmJxEFCgwPgkuiSDGXq2/2sIhgmtOyTWx9QDSFAGMrN9VtwIDAQAB
@@ -72,7 +72,7 @@
 
 1. 获取平台提供的appId（如："SA0001"）
 
-2. 构造业务参数bizParams（业务参数为jsonString作为整体参数加签）和基础参数并对其按key值按ASCII进行排序（sign不参与签名）：例如服务商用户初始化结果通知参数排序后如下
+2. 构造业务参数**bizParams**（业务参数为jsonString作为**整体**参数加签）和基础参数并对其按key值按ASCII进行排序（sign不参与签名）：例如服务商用户初始化结果通知参数排序后如下
 
    ```Java
    {
@@ -89,7 +89,7 @@
    appId=SA0001&bizParams={"orderNo":"726723761214065669","secretKey":"secret","userName":"test"}&method=api.saas.v1.user.init-result-notify&timestamp=1571650367181
    ```
 
-4. 使用服务商的私钥生成签名（算法：MD5withRSA）
+4. 使用**服务商的私钥**生成签名（算法：MD5withRSA）
 
 5. post请求发送，json格式
 
@@ -147,7 +147,7 @@
     http://wddev.panshi101.com/warranty.jsp?appId=x&bizParams=x&sign=x&timestamp=xxxx
     ```
 
-6.  服务商使用平台提供的公钥进行验签
+6.  服务商使用**平台提供的公钥**进行验签
 
 #### 3.3 RSA密钥生成方法
 
